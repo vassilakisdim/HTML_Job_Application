@@ -1,0 +1,134 @@
+<html>
+
+
+
+<style>
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 150px;
+	margin-right: 5px;
+    text-align: left;
+}
+
+
+
+sublabel{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 130px;
+	margin-right: 5px;
+	margin-left: 20px;
+    text-align: left;
+}
+
+
+label::after, sublabel::after {
+	content: ": ";
+}
+
+input, select {
+  display: inline-block;
+  float: left;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: lightblue;
+  border: none;
+  color: black;
+  padding: 8.5px 17px;
+  text-decoration: none;
+  margin: 0px 1px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+</style>
+
+
+
+<head>
+	<title> Job Application </title>
+</head>
+
+<table bgcolor="lightblue" width="100%">
+    <tr>
+        <td align="center">
+            <font size="6"><b>Job Application</b></font>
+        </td>
+    </tr>
+</table>
+<br>
+
+<body>
+	<form>
+		<table frame="box" style="border-radius:15px; border:3px solid black;"align="center" width = 60%>
+		<tr>
+		<td>
+			<center>
+			<b>Personal Information</b>
+			</center>
+			<br>
+			<label>First Name</label><input name="FirstName" maxlength="40" size="20"><br>
+			<label>Last Name</label><input name="LastName" maxlength="40" size="20"><br>
+			<label>Birth Date</label><input type="date" name="BirthDate" maxlen=40></input><br><hr size=2 color="black">
+			<label>Address</label><br>
+				<sublabel>Street</sublabel><input name="AddressSt" maxlen=80></input><br>
+				<sublabel>Number</sublabel><input type="number" name="AddressNum" maxlen=40></input><br><hr size=3 color="black">
+		<center>
+			<b> Education </b>
+		</center>
+		<br>
+		<label>Education Level</label>
+		<select id=EduLabel type>
+			<option> ---Please Chose--- </option>
+			<option> High School </option>
+			<option> College Degree </option>
+			<option> PhD </option>
+		</select>
+		<br><br>
+		<label>Graduation Institution</label><input name="gradsch" maxlen=40></input>
+		<br/>
+		<hr size=3 color="black">
+		<center>
+			<b>Derired Job Information</b>
+		</center>
+		<br>
+		<label>Desired Salary</label><input type="number" name="Salary" maxlen=40></input><br>
+		<label>Prefered Job Type:</label><input name="PrefJob" maxlen=40></input><br>
+		<label>Prefered Timetable</label>
+		<select id=Prefered Job type>
+			<option> ---Please Chose--- </option>
+			<option> Full-Time </option>
+			<option> Part-Time </option>
+			<option> Season Job </option>
+		</select>
+		<br><br><hr size=3 color="black">
+		<center>
+			<b>Details</b>
+		</center>
+		<br>
+		Tell us why we should employ you<br>
+		<textarea name="details" rows=7 cols=67></textarea>
+		<br>
+		<center>
+		<table cellpadding="8">
+			<tr>
+				<td>
+					<input type="submit" value="Submit"></input>
+				</td>
+				<td>
+					<input type="reset" vaue="Reset"></input>
+				</td>
+			</tr>
+		</table>
+		</center>
+		</td>
+		</tr>
+		</table>
+		
+</form>
+</body>
+</html>
